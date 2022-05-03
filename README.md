@@ -45,8 +45,8 @@ Please cite our paper if you use this dataset.
 @article{gao2021field,
   title={Field Extraction from Forms with Unlabeled Data},
   author={Gao, Mingfei and Chen, Zeyuan and Naik, Nikhil and Hashimoto, Kazuma and Xiong, Caiming and Xu, Ran},
-  journal={arXiv preprint arXiv:2110.04282},
-  year={2021}
+  journal={ACL Spa-NLP Workshop},
+  year={2022}
 }
 ```
 
