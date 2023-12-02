@@ -66,13 +66,13 @@ def visualize_annos(args, names):
         plt.clf()
 
 def run_download(names):
-    URL_root = 'https://s3-us-west-2.amazonaws.com/edu.ucsf.industrydocuments.artifacts'
+    URL_root = 'https://'https://download.industrydocuments.ucsf.edu'
     for name in tqdm(names):
         chars = name[0:4]
         char_string = '/'.join([c for c in chars])
         URL = os.path.join(URL_root,char_string, name, name+'.pdf')
         try:
-            os.system('wget '+URL+' -P '+os.path.join(args.out_dir, 'tmp/')+' --no-verbose')
+            os.system('wget '+URL+' -P '+os.path.join(args.out_dir, 'tmp/')+' --no-verbose  --no-check-certificate')
             images = convert_from_path(os.path.join(args.out_dir, 'tmp/',name+'.pdf'), dpi=200, last_page=1, fmt='png')
             images[0].save(os.path.join(args.out_dir, name+'.png'))
         except:
