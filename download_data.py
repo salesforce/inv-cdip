@@ -66,7 +66,8 @@ def visualize_annos(args, names):
         plt.clf()
 
 def run_download(names):
-    URL_root = 'https://s3-us-west-2.amazonaws.com/edu.ucsf.industrydocuments.artifacts'
+    
+    URL_root = '<placeholder>'
     for name in tqdm(names):
         chars = name[0:4]
         char_string = '/'.join([c for c in chars])
